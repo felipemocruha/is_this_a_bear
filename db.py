@@ -6,8 +6,8 @@ from pymongo import MongoClient
 
 if __name__ == '__main__':
     
-    bear_img_paths = os.listdir('../images/bear/')
-    not_bear_img_paths = os.listdir('../images/not_bear/')
+    bear_img_paths = os.listdir('../../images/bear/')
+    not_bear_img_paths = os.listdir('../../images/not_bear/')
 
     images_bear = []
     images_not_bear = []
@@ -16,7 +16,7 @@ if __name__ == '__main__':
 
     #bear loading
     for i in bear_img_paths:
-        im = cv2.imread('../images/bear/'+i)
+        im = cv2.imread('../../images/bear/'+i)
         if im != None:
             images_bear.append(im)
     
@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     #not_bear loading
     for i in bear_img_paths:
-        im = cv2.imread('../images/not_bear/'+i)
+        im = cv2.imread('../../images/not_bear/'+i)
         if im != None:
             images_not_bear.append(im)
     
